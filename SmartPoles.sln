@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPoles.API", "SmartPoles.API\SmartPoles.API.csproj", "{87C0A794-2C92-498A-8C30-9C2CC24BC117}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPoles.Domain", "SmartPoles.Domain\SmartPoles.Domain.csproj", "{21BBAB91-10BE-48B1-8F32-34808BA8E4D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPoles.Data", "SmartPoles.Data\SmartPoles.Data.csproj", "{7605BA80-C823-4406-9A76-091B77010DDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPoles.Application", "SmartPoles.Application\SmartPoles.Application.csproj", "{39A5775B-C54C-4EC0-A868-35519808CF5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPoles.CrossCutting", "SmartPoles.CrossCutting\SmartPoles.CrossCutting.csproj", "{05D7921D-E371-49D8-813A-59A779ACB394}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPoles.IoC", "SmartPoles.IoC\SmartPoles.IoC.csproj", "{8444A727-AB24-4FD2-B9ED-80184B3B2600}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87C0A794-2C92-498A-8C30-9C2CC24BC117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87C0A794-2C92-498A-8C30-9C2CC24BC117}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87C0A794-2C92-498A-8C30-9C2CC24BC117}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87C0A794-2C92-498A-8C30-9C2CC24BC117}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21BBAB91-10BE-48B1-8F32-34808BA8E4D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21BBAB91-10BE-48B1-8F32-34808BA8E4D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21BBAB91-10BE-48B1-8F32-34808BA8E4D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21BBAB91-10BE-48B1-8F32-34808BA8E4D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7605BA80-C823-4406-9A76-091B77010DDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7605BA80-C823-4406-9A76-091B77010DDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7605BA80-C823-4406-9A76-091B77010DDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7605BA80-C823-4406-9A76-091B77010DDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39A5775B-C54C-4EC0-A868-35519808CF5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39A5775B-C54C-4EC0-A868-35519808CF5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39A5775B-C54C-4EC0-A868-35519808CF5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39A5775B-C54C-4EC0-A868-35519808CF5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05D7921D-E371-49D8-813A-59A779ACB394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05D7921D-E371-49D8-813A-59A779ACB394}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05D7921D-E371-49D8-813A-59A779ACB394}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05D7921D-E371-49D8-813A-59A779ACB394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8444A727-AB24-4FD2-B9ED-80184B3B2600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8444A727-AB24-4FD2-B9ED-80184B3B2600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8444A727-AB24-4FD2-B9ED-80184B3B2600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8444A727-AB24-4FD2-B9ED-80184B3B2600}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05088E3B-BD23-432A-9508-82D7833297DE}
+	EndGlobalSection
+EndGlobal

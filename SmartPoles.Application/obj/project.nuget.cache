@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "ruZ5tY1IudQ4iu6nJ7J9KYM6B8KSy/9XjpNASJGqrQCfbfihcphHG8gks95GURR0nf7hIIuDYKzpMDdB16w0nw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\renan\\OneDrive\\Documentos\\projects\\SmartPoles\\SmartPoles.Application\\SmartPoles.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\renan\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\renan\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
+    "C:\\Users\\renan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.0.0\\microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
