@@ -25,7 +25,15 @@ namespace SmartPoles.Data
                 Password = "H/i+2c/uXaaBwdCfZ8L0jzyQHzdpIn2QYqt7YAQBpVI=",
                 Id = Guid.Parse("50e56a44-d975-4fec-a39c-0ae009a2be95")
             });
-            
+
+            modelBuilder.Entity<Condominium>().HasData(new Condominium()
+            {
+                Id = Guid.Parse("c88cdc3a-6b82-460b-9356-dc63847aa437"),
+                Name = "Condominio 1",
+                City = "São Bernardo do Campo",
+                Image = "teste"
+            });
+
             base.OnModelCreating(modelBuilder);
         }
     }

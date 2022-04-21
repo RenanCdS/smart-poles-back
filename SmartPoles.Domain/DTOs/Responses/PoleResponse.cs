@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace SmartPoles.Domain.Entities
+namespace SmartPoles.Domain.DTOs.Responses
 {
-    public class Pole : Base
+    public class PoleResponse
     {
+        public Guid Id { get; set; }
         public Guid CondominiumId { get; set; }
         public bool IsGateway { get; set; }
-        public Condominium Condominium { get; set; }
     }
 }

@@ -9,5 +9,6 @@ namespace SmartPoles.CrossCutting.Error
     public static class ErrorMessages
     {
         public static string INVALID_USER = "Usuário ou senha inválidos.";
+        public static string CONDOMINIUM_NOT_FOUND = "Condomínio informado não existe.";
     }
 }
