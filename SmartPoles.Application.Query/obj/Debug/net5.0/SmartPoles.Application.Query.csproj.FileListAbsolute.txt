@@ -1,0 +1,17 @@
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Application.Query\bin\Debug\net5.0\SmartPoles.Application.Query.deps.json
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Application.Query\bin\Debug\net5.0\SmartPoles.Application.Query.dll
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Application.Query\bin\Debug\net5.0\ref\SmartPoles.Application.Query.dll
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Application.Query\bin\Debug\net5.0\SmartPoles.Application.Query.pdb
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Application.Query\bin\Debug\net5.0\SmartPoles.CrossCutting.dll
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Application.Query\bin\Debug\net5.0\SmartPoles.Domain.dll
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Application.Query\bin\Debug\net5.0\SmartPoles.CrossCutting.pdb
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Application.Query\bin\Debug\net5.0\SmartPoles.Domain.pdb
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Application.Query\obj\Debug\net5.0\SmartPoles.Application.Query.csprojAssemblyReference.cache
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Application.Query\obj\Debug\net5.0\SmartPoles.Application.Query.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Application.Query\obj\Debug\net5.0\SmartPoles.Application.Query.AssemblyInfoInputs.cache
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Application.Query\obj\Debug\net5.0\SmartPoles.Application.Query.AssemblyInfo.cs
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Application.Query\obj\Debug\net5.0\SmartPoles.Application.Query.csproj.CoreCompileInputs.cache
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Application.Query\obj\Debug\net5.0\SmartPoles.Application.Query.csproj.CopyComplete
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Application.Query\obj\Debug\net5.0\SmartPoles.Application.Query.dll
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Application.Query\obj\Debug\net5.0\ref\SmartPoles.Application.Query.dll
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Application.Query\obj\Debug\net5.0\SmartPoles.Application.Query.pdb

@@ -2,7 +2,7 @@
 using SmartPoles.CrossCutting.Commons;
 using SmartPoles.Domain.DTOs.Responses;
 
-namespace SmartPoles.Application.Requests
+namespace SmartPoles.Application.Requests.Commands
 {
     public class AuthenticateRequest : IRequest<Response<LoginResponseDto>>
     {

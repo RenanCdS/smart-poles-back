@@ -32,5 +32,10 @@ namespace SmartPoles.CrossCutting.Commons
         {
             return new Response<T>(value);
         }
+
+        public static Response<T> Ok()
+        {
+            return new Response<T>(true);
+        }
     }
 }

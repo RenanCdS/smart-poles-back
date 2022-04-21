@@ -1,5 +1,8 @@
 ﻿using SmartPoles.Domain.Interfaces.Repositories;
 using SmartPoles.Domain.Entities;
+using System.Threading.Tasks;
+using System;
+using Microsoft.EntityFrameworkCore;
 
 namespace SmartPoles.Data.Repositories
 {

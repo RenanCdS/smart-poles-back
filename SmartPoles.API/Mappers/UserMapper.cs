@@ -1,10 +1,6 @@
 ﻿using AutoMapper;
-using SmartPoles.Application.Requests;
+using SmartPoles.Application.Requests.Commands;
 using SmartPoles.Domain.DTOs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace SmartPoles.API.Mappers
 {

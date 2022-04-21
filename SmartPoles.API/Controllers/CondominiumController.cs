@@ -2,8 +2,10 @@
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
-using SmartPoles.Domain.DTOs.Requests;
 using Microsoft.AspNetCore.Http;
+using System.Linq;
+using SmartPoles.Application.Requests.Queries;
+using SmartPoles.Application.Requests.Commands;
 
 namespace SmartPoles.API.Controllers
 {
@@ -12,9 +14,9 @@ namespace SmartPoles.API.Controllers
     public class CondominiumController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public CondominiumController()
+        public CondominiumController(IMediator mediator)
         {
-
+            _mediator = mediator;
         }
 
         [HttpPost]
@@ -22,8 +24,15 @@ namespace SmartPoles.API.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [Produces("application/json")]
-        public async Task<IActionResult> AddCondominium(AddCondominiumDto addCondominiumDto)
+        public async Task<IActionResult> AddCondominium(AddCondominiumRequest addCondominiumRequest)
         {
+            var response = await _mediator.Send(addCondominiumRequest);
+
+            if (!response.IsSuccess)
+            {
+                return BadRequest(response.ErrorMessages?.FirstOrDefault());
+            }
+
             return StatusCode(StatusCodes.Status201Created);
         }
 
@@ -32,19 +41,35 @@ namespace SmartPoles.API.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [Produces("application/json")]
-        public async Task<IActionResult> UpdateCondominium(UpdateCondominiumDto updateCondominiumDto)
+        public async Task<IActionResult> UpdateCondominium(UpdateCondominiumRequest updateCondominiumRequest)
         {
-            return StatusCode(StatusCodes.Status200OK);
+            var response = await _mediator.Send(updateCondominiumRequest);
+            if (!response.IsSuccess)
+            {
+                return BadRequest(response.ErrorMessages.FirstOrDefault());
+            }
+
+            return Ok();
         }
 
-        [HttpDelete]
+        [HttpDelete("{condominiumId:Guid}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [Produces("application/json")]
         public async Task<IActionResult> DeleteCondominium(Guid condominiumId)
         {
-            return StatusCode(StatusCodes.Status200OK);
+            var request = new DeleteCondominiumRequest()
+            {
+                Id = condominiumId
+            };
+            var response = await _mediator.Send(request);
+            if (!response.IsSuccess)
+            {
+                return BadRequest();
+            }
+
+            return Ok();
         }
 
         [HttpGet]
@@ -54,7 +79,10 @@ namespace SmartPoles.API.Controllers
         [Produces("application/json")]
         public async Task<IActionResult> GetCondominiums()
         {
-            return StatusCode(StatusCodes.Status200OK);
+            var request = new GetAllCondominiumsQuery();
+            var response = await _mediator.Send(request);
+
+            return Ok(response.Value);
         }
     }
 }

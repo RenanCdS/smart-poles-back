@@ -2,8 +2,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using SmartPoles.Application.Requests;
+using SmartPoles.Application.Requests.Commands;
 using SmartPoles.Data;
 using SmartPoles.Domain.DTOs;
 using System;

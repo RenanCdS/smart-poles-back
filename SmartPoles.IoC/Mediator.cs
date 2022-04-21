@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using SmartPoles.Application.Requests;
+using SmartPoles.Application.Requests.Commands;
 
 namespace SmartPoles.IoC
 {

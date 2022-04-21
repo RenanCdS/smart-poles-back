@@ -1,18 +1,14 @@
 ﻿using MediatR;
-using SmartPoles.Application.Requests;
+using SmartPoles.Application.Requests.Commands;
 using SmartPoles.CrossCutting.Commons;
 using SmartPoles.CrossCutting.Error;
 using SmartPoles.Domain.DTOs.Responses;
 using SmartPoles.Domain.Interfaces.Repositories;
 using SmartPoles.Domain.Interfaces.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SmartPoles.Application.Handlers
+namespace SmartPoles.Application.Handlers.Commands
 {
     public class AuthenticateHandler : IRequestHandler<AuthenticateRequest, Response<LoginResponseDto>>
     {

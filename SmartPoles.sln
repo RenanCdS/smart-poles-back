@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPoles.API", "SmartPoles.API\SmartPoles.API.csproj", "{87C0A794-2C92-498A-8C30-9C2CC24BC117}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartPoles.API", "SmartPoles.API\SmartPoles.API.csproj", "{87C0A794-2C92-498A-8C30-9C2CC24BC117}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPoles.Domain", "SmartPoles.Domain\SmartPoles.Domain.csproj", "{21BBAB91-10BE-48B1-8F32-34808BA8E4D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartPoles.Domain", "SmartPoles.Domain\SmartPoles.Domain.csproj", "{21BBAB91-10BE-48B1-8F32-34808BA8E4D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPoles.Data", "SmartPoles.Data\SmartPoles.Data.csproj", "{7605BA80-C823-4406-9A76-091B77010DDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartPoles.Data", "SmartPoles.Data\SmartPoles.Data.csproj", "{7605BA80-C823-4406-9A76-091B77010DDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPoles.Application", "SmartPoles.Application\SmartPoles.Application.csproj", "{39A5775B-C54C-4EC0-A868-35519808CF5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartPoles.Application", "SmartPoles.Application\SmartPoles.Application.csproj", "{39A5775B-C54C-4EC0-A868-35519808CF5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPoles.CrossCutting", "SmartPoles.CrossCutting\SmartPoles.CrossCutting.csproj", "{05D7921D-E371-49D8-813A-59A779ACB394}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartPoles.CrossCutting", "SmartPoles.CrossCutting\SmartPoles.CrossCutting.csproj", "{05D7921D-E371-49D8-813A-59A779ACB394}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPoles.IoC", "SmartPoles.IoC\SmartPoles.IoC.csproj", "{8444A727-AB24-4FD2-B9ED-80184B3B2600}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartPoles.IoC", "SmartPoles.IoC\SmartPoles.IoC.csproj", "{8444A727-AB24-4FD2-B9ED-80184B3B2600}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
