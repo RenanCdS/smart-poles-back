@@ -59,6 +59,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -130,7 +134,14 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\renan\\OneDrive\\Documentos\\projects\\SmartPoles\\SmartPoles.CrossCutting\\SmartPoles.CrossCutting.csproj": {
+                "projectPath": "C:\\Users\\renan\\OneDrive\\Documentos\\projects\\SmartPoles\\SmartPoles.CrossCutting\\SmartPoles.CrossCutting.csproj"
+              },
+              "C:\\Users\\renan\\OneDrive\\Documentos\\projects\\SmartPoles\\SmartPoles.Domain\\SmartPoles.Domain.csproj": {
+                "projectPath": "C:\\Users\\renan\\OneDrive\\Documentos\\projects\\SmartPoles\\SmartPoles.Domain\\SmartPoles.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -146,6 +157,10 @@
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.16, )"
             }
           },
           "imports": [
@@ -193,11 +208,7 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {
-              "C:\\Users\\renan\\OneDrive\\Documentos\\projects\\SmartPoles\\SmartPoles.Domain\\SmartPoles.Domain.csproj": {
-                "projectPath": "C:\\Users\\renan\\OneDrive\\Documentos\\projects\\SmartPoles\\SmartPoles.Domain\\SmartPoles.Domain.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -390,6 +401,9 @@
               },
               "C:\\Users\\renan\\OneDrive\\Documentos\\projects\\SmartPoles\\SmartPoles.CrossCutting\\SmartPoles.CrossCutting.csproj": {
                 "projectPath": "C:\\Users\\renan\\OneDrive\\Documentos\\projects\\SmartPoles\\SmartPoles.CrossCutting\\SmartPoles.CrossCutting.csproj"
+              },
+              "C:\\Users\\renan\\OneDrive\\Documentos\\projects\\SmartPoles\\SmartPoles.Data\\SmartPoles.Data.csproj": {
+                "projectPath": "C:\\Users\\renan\\OneDrive\\Documentos\\projects\\SmartPoles\\SmartPoles.Data\\SmartPoles.Data.csproj"
               }
             }
           }

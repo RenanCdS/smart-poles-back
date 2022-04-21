@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "SmartPoles.API/1.0.0": {
         "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
           "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.16",
           "Microsoft.EntityFrameworkCore.Design": "5.0.16",
@@ -250,7 +251,7 @@
           "System.ObjectModel": "5.0.0.0",
           "System.Reflection.DispatchProxy": "5.0.0.0",
           "System.Reflection": "5.0.0.0",
-          "System.Reflection.Emit": "5.0.0.0",
+          "System.Reflection.Emit.Reference": "5.0.0.0",
           "System.Reflection.Emit.ILGeneration": "5.0.0.0",
           "System.Reflection.Emit.Lightweight": "5.0.0.0",
           "System.Reflection.Extensions": "5.0.0.0",
@@ -330,6 +331,37 @@
         },
         "compile": {
           "SmartPoles.API.dll": {}
+        }
+      },
+      "AutoMapper/10.1.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "System.Reflection.Emit": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.1.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/8.1.1": {
+        "dependencies": {
+          "AutoMapper": "10.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Options": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.1.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
       "Humanizer.Core/2.8.26": {
@@ -669,10 +701,14 @@
           "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll": {}
         }
       },
+      "System.Reflection.Emit/4.7.0": {},
       "System.Security.Cryptography.Cng/4.5.0": {},
       "SmartPoles.Application/1.0.0": {
         "dependencies": {
-          "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0"
+          "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.16",
+          "SmartPoles.CrossCutting": "1.0.0",
+          "SmartPoles.Domain": "1.0.0"
         },
         "runtime": {
           "SmartPoles.Application.dll": {}
@@ -683,8 +719,7 @@
       },
       "SmartPoles.CrossCutting/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.16",
-          "SmartPoles.Domain": "1.0.0"
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.16"
         },
         "runtime": {
           "SmartPoles.CrossCutting.dll": {}
@@ -718,7 +753,8 @@
           "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
           "SmartPoles.Application": "1.0.0",
-          "SmartPoles.CrossCutting": "1.0.0"
+          "SmartPoles.CrossCutting": "1.0.0",
+          "SmartPoles.Data": "1.0.0"
         },
         "runtime": {
           "SmartPoles.IoC.dll": {}
@@ -1969,7 +2005,7 @@
         },
         "compileOnly": true
       },
-      "System.Reflection.Emit/5.0.0.0": {
+      "System.Reflection.Emit.Reference/5.0.0.0": {
         "compile": {
           "System.Reflection.Emit.dll": {}
         },
@@ -2421,6 +2457,20 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AutoMapper/10.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uMgbqOdu9ZG5cIOty0C85hzzayBH2i9BthnS5FlMqKtMSHDv4ts81a2jS1VFaDBVhlBeIqJ/kQKjQY95BZde9w==",
+      "path": "automapper/10.1.1",
+      "hashPath": "automapper.10.1.1.nupkg.sha512"
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/8.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xSWoVzOipuDU4PeZcUfaZQ+xqXU8QmGv5jrdlxt3MYm9xaOmrefqcfzGQ3SQ+D+8wfBa/ZwSuL0qKOVj080inA==",
+      "path": "automapper.extensions.microsoft.dependencyinjection/8.1.1",
+      "hashPath": "automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512"
+    },
     "Humanizer.Core/2.8.26": {
       "type": "package",
       "serviceable": true,
@@ -2665,6 +2715,13 @@
       "sha512": "sha512-sPnRn9dUMYARQC3mAKWpig/7rlrruqJvopKXmGoYAQ1A+xQsT3q5LiwsArkV8Oz/hfiRCLkV9vgi3FQg/mYfrw==",
       "path": "system.identitymodel.tokens.jwt/6.7.1",
       "hashPath": "system.identitymodel.tokens.jwt.6.7.1.nupkg.sha512"
+    },
+    "System.Reflection.Emit/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VR4kk8XLKebQ4MZuKuIni/7oh+QGFmZW3qORd1GvBq/8026OpW501SzT/oypwiQl4TvT8ErnReh/NzY9u+C6wQ==",
+      "path": "system.reflection.emit/4.7.0",
+      "hashPath": "system.reflection.emit.4.7.0.nupkg.sha512"
     },
     "System.Security.Cryptography.Cng/4.5.0": {
       "type": "package",
@@ -3733,7 +3790,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Reflection.Emit/5.0.0.0": {
+    "System.Reflection.Emit.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

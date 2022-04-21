@@ -92,3 +92,5 @@ C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.API\obj\Debug\
 C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.API\obj\Debug\net5.0\ref\SmartPoles.API.dll
 C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.API\obj\Debug\net5.0\SmartPoles.API.pdb
 C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.API\obj\Debug\net5.0\SmartPoles.API.genruntimeconfig.cache
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.API\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.API\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

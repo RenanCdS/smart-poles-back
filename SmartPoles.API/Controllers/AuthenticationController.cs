@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using SmartPoles.Application.Requests;
 using SmartPoles.Data;
 using SmartPoles.Domain.DTOs;
 using System;
@@ -13,10 +16,12 @@ namespace SmartPoles.API.Controllers
     [Route("auth")]
     public class AuthenticationController : ControllerBase
     {
-        private readonly SmartPolesContext _context;
-        public AuthenticationController(SmartPolesContext context)
+        private readonly IMapper _mapper;
+        private readonly IMediator _mediator;
+        public AuthenticationController(IMapper mapper, IMediator mediator)
         {
-            _context = context;
+            _mapper = mapper;
+            _mediator = mediator;
         }
 
         [HttpPost("login")]
@@ -26,8 +31,15 @@ namespace SmartPoles.API.Controllers
         [Produces("application/json")]
         public async Task<IActionResult> Login(UserDto userDto)
         {
-            var users = await _context.Users.ToListAsync();
-            return Ok(users);
+            var authenticateRequest = _mapper.Map<AuthenticateRequest>(userDto);
+
+            var authenticateResponse = await _mediator.Send(authenticateRequest);
+
+            if (!authenticateResponse.IsSuccess)
+            {
+                return BadRequest(authenticateResponse.ErrorMessages.FirstOrDefault());
+            }
+            return Ok(authenticateResponse.Value);
         }
     }
 }

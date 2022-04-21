@@ -7,7 +7,6 @@ namespace SmartPoles.Domain.Entities
         public Guid Id { get; set; }
         public Guid CondominiumId { get; set; }
         public bool IsGateway { get; set; }
-        public Guid AssociationId { get; set; }
         public Condominium Condominium { get; set; }
     }
 }

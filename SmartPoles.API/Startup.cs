@@ -9,11 +9,13 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using SmartPoles.API.Mappers;
 using SmartPoles.Data;
 using SmartPoles.IoC;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -57,7 +59,9 @@ namespace SmartPoles.API
             });
             
             services.AddServices();
+            services.AddRepositories();
             services.AddMediator();
+            services.AddAutoMapper(Assembly.GetAssembly(typeof(UserMapper)));
 
             services.AddSwaggerGen(c =>
             {

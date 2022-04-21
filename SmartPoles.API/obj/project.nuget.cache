@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "UBlPqhoTYiCAZ+CHO/2kZ5f2YGMphaSCUlm5CZxNkNAi2mQ9+7t7PV/o1Nhg6csNNKB0Qv1NEmxX9IJtt8pHpA==",
+  "dgSpecHash": "9d20MZl47Vy0gRoNknux1jnPDIMA55dmEKXkzq0Rddgbk/IBByXjvkxU/c3qmFQlkEBZkkFQ6h/Pr6N/DXlwFQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\renan\\OneDrive\\Documentos\\projects\\SmartPoles\\SmartPoles.API\\SmartPoles.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\renan\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\renan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\renan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\renan\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\renan\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
@@ -39,6 +41,7 @@
     "C:\\Users\\renan\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\renan\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
     "C:\\Users\\renan\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.7.1\\system.identitymodel.tokens.jwt.6.7.1.nupkg.sha512",
+    "C:\\Users\\renan\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
   "logs": []

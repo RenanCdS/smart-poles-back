@@ -17,3 +17,5 @@ C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.IoC\obj\Debug\
 C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.IoC\obj\Debug\net5.0\SmartPoles.IoC.dll
 C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.IoC\obj\Debug\net5.0\ref\SmartPoles.IoC.dll
 C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.IoC\obj\Debug\net5.0\SmartPoles.IoC.pdb
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.IoC\bin\Debug\net5.0\SmartPoles.Data.dll
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.IoC\bin\Debug\net5.0\SmartPoles.Data.pdb

@@ -8,8 +8,7 @@
     ".NETCoreApp,Version=v5.0": {
       "SmartPoles.CrossCutting/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.16",
-          "SmartPoles.Domain": "1.0.0"
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.16"
         },
         "runtime": {
           "SmartPoles.CrossCutting.dll": {}
@@ -95,12 +94,7 @@
           }
         }
       },
-      "System.Security.Cryptography.Cng/4.5.0": {},
-      "SmartPoles.Domain/1.0.0": {
-        "runtime": {
-          "SmartPoles.Domain.dll": {}
-        }
-      }
+      "System.Security.Cryptography.Cng/4.5.0": {}
     }
   },
   "libraries": {
@@ -171,11 +165,6 @@
       "sha512": "sha512-WG3r7EyjUe9CMPFSs6bty5doUqT+q9pbI80hlNzo2SkPkZ4VTuZkGWjpp77JB8+uaL4DFPRdBsAY+DX3dBK92A==",
       "path": "system.security.cryptography.cng/4.5.0",
       "hashPath": "system.security.cryptography.cng.4.5.0.nupkg.sha512"
-    },
-    "SmartPoles.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

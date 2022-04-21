@@ -1,9 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using SmartPoles.CrossCutting.Services;
+using SmartPoles.Application.Services;
 using SmartPoles.Domain.Interfaces.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
