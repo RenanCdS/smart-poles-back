@@ -171,7 +171,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\renan\\OneDrive\\Documentos\\projects\\SmartPoles\\SmartPoles.CrossCutting\\SmartPoles.CrossCutting.csproj": {
+                "projectPath": "C:\\Users\\renan\\OneDrive\\Documentos\\projects\\SmartPoles\\SmartPoles.CrossCutting\\SmartPoles.CrossCutting.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

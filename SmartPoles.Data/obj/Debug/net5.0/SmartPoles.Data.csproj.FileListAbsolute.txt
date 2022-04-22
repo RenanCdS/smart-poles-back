@@ -28,3 +28,5 @@ C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Data\obj\Debug
 C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Data\obj\Debug\net5.0\SmartPoles.Data.dll
 C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Data\obj\Debug\net5.0\ref\SmartPoles.Data.dll
 C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Data\obj\Debug\net5.0\SmartPoles.Data.pdb
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Data\bin\Debug\net5.0\SmartPoles.CrossCutting.dll
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Data\bin\Debug\net5.0\SmartPoles.CrossCutting.pdb

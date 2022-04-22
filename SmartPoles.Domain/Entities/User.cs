@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SmartPoles.CrossCutting.Enums;
+using System;
+using System.Security.Cryptography;
 
 namespace SmartPoles.Domain.Entities
 {
@@ -10,6 +12,16 @@ namespace SmartPoles.Domain.Entities
         public string Salt { get; set; }
         public Guid CondominiumId { get; set; }
         public Condominium Condominium { get; set; }
-        public string Role { get; set; }
+        public Role Role { get; set; }
+
+        public void GenerateSalt()
+        {
+            byte[] randomBytes = new byte[128 / 8];
+            using (var generator = RandomNumberGenerator.Create())
+            {
+               generator.GetBytes(randomBytes);
+               Salt = Convert.ToBase64String(randomBytes);
+            }
+        }
     }
 }

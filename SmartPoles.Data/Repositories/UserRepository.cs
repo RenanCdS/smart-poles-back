@@ -14,7 +14,8 @@ namespace SmartPoles.Data.Repositories
         }
         public async Task<User> GetUserByUsernameAsync(string username)
         {
-            return await _context.Users.FirstOrDefaultAsync(user => user.Username == username);
+            return await _context.Users.Include(u => u.Condominium)
+                .FirstOrDefaultAsync(user => user.Username == username);
         }
     }
 }

@@ -52,6 +52,39 @@ namespace SmartPoles.API.Controllers
             return Ok(response.Value);
         }
 
+        [HttpDelete("{condominiumId:Guid}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [Produces("application/json")]
+        public async Task<IActionResult> DeletePole(Guid poleId)
+        {
+            var deletePoleRequest = new DeletePoleRequest(poleId);
+            var response = await _mediator.Send(deletePoleRequest);
+
+            if (!response.IsSuccess)
+            {
+                return BadRequest(response.ErrorMessages.FirstOrDefault());
+            }
+            return Ok();
+        }
+
+        [HttpPut]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [Produces("application/json")]
+        public async Task<IActionResult> UpdatePole(UpdatePoleRequest updatePoleRequest)
+        {
+            var response = await _mediator.Send(updatePoleRequest);
+
+            if (!response.IsSuccess)
+            {
+                return BadRequest(response.ErrorMessages.FirstOrDefault());
+            }
+            return Ok();
+        }
+
         [HttpGet("{condominiumId:Guid}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

@@ -22,3 +22,6 @@ C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Domain\obj\Deb
 C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Domain\obj\Debug\net5.0\SmartPoles.Domain.dll
 C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Domain\obj\Debug\net5.0\ref\SmartPoles.Domain.dll
 C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Domain\obj\Debug\net5.0\SmartPoles.Domain.pdb
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Domain\bin\Debug\net5.0\SmartPoles.CrossCutting.dll
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Domain\bin\Debug\net5.0\SmartPoles.CrossCutting.pdb
+C:\Users\renan\OneDrive\Documentos\projects\SmartPoles\SmartPoles.Domain\obj\Debug\net5.0\SmartPoles.Domain.csproj.CopyComplete

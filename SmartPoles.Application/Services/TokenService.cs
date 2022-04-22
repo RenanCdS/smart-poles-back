@@ -4,12 +4,10 @@ using System.IdentityModel.Tokens.Jwt;
 using SmartPoles.Domain.Entities;
 using SmartPoles.Domain.Interfaces.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
+using System.Security.Cryptography;
 
 namespace SmartPoles.Application.Services
 {

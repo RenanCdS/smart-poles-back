@@ -11,6 +11,7 @@ namespace SmartPoles.API.Mappers
         {
             CreateMap<AddPoleRequest, Pole>().ReverseMap();
             CreateMap<Pole, PoleResponse>().ReverseMap();
+            CreateMap<UpdatePoleRequest, Pole>().ReverseMap();
         }
     }
 }

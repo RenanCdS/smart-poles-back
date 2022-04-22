@@ -742,6 +742,9 @@
         }
       },
       "SmartPoles.Domain/1.0.0": {
+        "dependencies": {
+          "SmartPoles.CrossCutting": "1.0.0"
+        },
         "runtime": {
           "SmartPoles.Domain.dll": {}
         },
