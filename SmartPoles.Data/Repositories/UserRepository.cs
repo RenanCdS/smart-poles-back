@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SmartPoles.Domain.Entities;
 using SmartPoles.Domain.Interfaces.Repositories;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace SmartPoles.Data.Repositories
@@ -16,6 +17,11 @@ namespace SmartPoles.Data.Repositories
         {
             return await _context.Users.Include(u => u.Condominium)
                 .FirstOrDefaultAsync(user => user.Username == username);
+        }
+
+        public async Task<IEnumerable<User>> GetAllUsersWithCondominiumAsync()
+        {
+            return await _context.Users.Include(u => u.Condominium).ToListAsync();
         }
     }
 }

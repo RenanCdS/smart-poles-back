@@ -44,6 +44,7 @@ namespace SmartPoles.Application.Handlers.Commands
 
             var userToBeCreated = _mapper.Map<User>(request);
             userToBeCreated.GenerateSalt();
+            userToBeCreated.Password = _tokenService.GenerateSaltedHash(request.Password, userToBeCreated.Salt);
 
             await _userRepository.AddAsync(userToBeCreated);
 

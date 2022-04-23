@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace SmartPoles.Application.Requests.Queries
 {
-    public class GetAllUsersQuery : IRequest<Response<IEnumerable<UserResponse>>>
+    public class GetAllUsersQuery : IRequest<Response<IEnumerable<UserWithCondominiumResponse>>>
     {
     }
 }

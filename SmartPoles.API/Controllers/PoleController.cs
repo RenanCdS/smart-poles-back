@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SmartPoles.Application.Requests.Commands;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 namespace SmartPoles.API.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("pole")]
     public class PoleController : ControllerBase
     {
@@ -52,7 +54,7 @@ namespace SmartPoles.API.Controllers
             return Ok(response.Value);
         }
 
-        [HttpDelete("{condominiumId:Guid}")]
+        [HttpDelete("{poleId:Guid}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]

@@ -23,7 +23,7 @@ namespace SmartPoles.Application.Handlers.Queries
         }
         public async Task<Response<IEnumerable<PoleResponse>>> Handle(GetAllPolesQuery request, CancellationToken cancellationToken)
         {
-            var allPolesFromDatabase = await _poleRepository.GetAllAsync();
+            var allPolesFromDatabase = await _poleRepository.GetPolesWithCondominiumAsync();
             var polesToReturn = _mapper.Map<IEnumerable<PoleResponse>>(allPolesFromDatabase);
 
             return Response<IEnumerable<PoleResponse>>.Ok(polesToReturn);

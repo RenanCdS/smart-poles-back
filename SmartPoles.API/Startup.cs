@@ -10,6 +10,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using SmartPoles.API.Mappers;
+using SmartPoles.CrossCutting.Constants;
+using SmartPoles.CrossCutting.Enums;
 using SmartPoles.Data;
 using SmartPoles.IoC;
 using System;
@@ -33,7 +35,7 @@ namespace SmartPoles.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+           
             services.AddControllers();
             services.AddAuthentication(options =>
             {
@@ -41,7 +43,8 @@ namespace SmartPoles.API
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
             .AddJwtBearer(options => {
-                var key = Encoding.ASCII.GetBytes(Configuration.GetValue<string>("JwtSecret"));
+                var secret = Configuration.GetValue<string>("JwtSecret");
+                var key = Encoding.ASCII.GetBytes(secret);
                 options.RequireHttpsMetadata = false;
                 options.SaveToken = true;
                 options.TokenValidationParameters = new TokenValidationParameters
@@ -49,7 +52,8 @@ namespace SmartPoles.API
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuer = false,
-                    ValidateAudience = false
+                    ValidateAudience = false,
+                    ClockSkew = TimeSpan.Zero
                 };
             });
 
@@ -62,6 +66,16 @@ namespace SmartPoles.API
             services.AddRepositories();
             services.AddMediator();
             services.AddAutoMapper(Assembly.GetAssembly(typeof(UserMapper)));
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy(Policies.ADM_PERMISSION, policy =>
+                {
+                    policy.RequireRole(((int)Role.ADM).ToString(), Role.ADM.ToString());
+                });
+            });
+
+            services.AddCors();
 
             services.AddSwaggerGen(c =>
             {
@@ -81,8 +95,9 @@ namespace SmartPoles.API
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SmartPoles.API v1"));
             }
 
+            app.UseCors(option => option.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()); ;
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

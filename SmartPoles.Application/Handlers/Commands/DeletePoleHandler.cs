@@ -14,6 +14,10 @@ namespace SmartPoles.Application.Handlers.Commands
     public class DeletePoleHandler : IRequestHandler<DeletePoleRequest, Response<bool>>
     {
         private readonly IPoleRepository _poleRepository;
+        public DeletePoleHandler(IPoleRepository poleRepository)
+        {
+            _poleRepository = poleRepository;
+        }
         public async Task<Response<bool>> Handle(DeletePoleRequest request, CancellationToken cancellationToken)
         {
             await _poleRepository.DeleteAsync(request.PoleId);

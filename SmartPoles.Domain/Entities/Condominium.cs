@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SmartPoles.Domain.Entities
 {
@@ -7,6 +8,6 @@ namespace SmartPoles.Domain.Entities
         public string Name { get; set; }
         public string City { get; set; }
         public string Image { get; set; }
-        public User User { get; set; }
+        public IEnumerable<User> User { get; set; }
     }
 }

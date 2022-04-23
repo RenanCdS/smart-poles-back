@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SmartPoles.Application.Requests.Commands;
 using SmartPoles.Application.Requests.Queries;
+using SmartPoles.CrossCutting.Constants;
 using SmartPoles.Domain.DTOs;
 using System.Linq;
 using System.Threading.Tasks;
@@ -57,6 +59,7 @@ namespace SmartPoles.API.Controllers
         }
 
         [HttpGet("user")]
+        [Authorize(Policy = Policies.ADM_PERMISSION)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -74,7 +77,8 @@ namespace SmartPoles.API.Controllers
         }
 
 
-        [HttpGet("user/{username:string}")]
+        [HttpGet("user/{username}")]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -91,7 +95,8 @@ namespace SmartPoles.API.Controllers
             return Ok(response.Value);
         }
 
-        [HttpDelete("user/{username:string}")]
+        [HttpDelete("user/{username}")]
+        [Authorize(Policy = Policies.ADM_PERMISSION)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]

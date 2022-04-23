@@ -20,5 +20,10 @@ namespace SmartPoles.Data.Repositories
         {
             return await _context.Poles.Where(pole => pole.CondominiumId == condominiumUd).ToListAsync();
         }
+
+        public async Task<IEnumerable<Pole>> GetPolesWithCondominiumAsync()
+        {
+            return await _context.Poles.Include(p => p.Condominium).OrderBy(p => p.Condominium.Name).ToListAsync();
+        }
     }
 }

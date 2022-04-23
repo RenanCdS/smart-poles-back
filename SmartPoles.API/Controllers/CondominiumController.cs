@@ -6,17 +6,22 @@ using Microsoft.AspNetCore.Http;
 using System.Linq;
 using SmartPoles.Application.Requests.Queries;
 using SmartPoles.Application.Requests.Commands;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SmartPoles.API.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("condominium")]
     public class CondominiumController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public CondominiumController(IMediator mediator)
+        private readonly ILogger<CondominiumController> _logger;
+        public CondominiumController(IMediator mediator, ILogger<CondominiumController> logger)
         {
             _mediator = mediator;
+            _logger = logger;
         }
 
         [HttpPost]
@@ -79,6 +84,7 @@ namespace SmartPoles.API.Controllers
         [Produces("application/json")]
         public async Task<IActionResult> GetCondominiums()
         {
+            _logger.LogInformation("Teste de condominios...");
             var request = new GetAllCondominiumsQuery();
             var response = await _mediator.Send(request);
 

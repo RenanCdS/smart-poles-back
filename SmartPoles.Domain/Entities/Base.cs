@@ -10,6 +10,6 @@ namespace SmartPoles.Domain.Entities
     {
         public Guid Id { get; set; } = Guid.NewGuid();
         public string CreatedBy { get; set; }
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
 }

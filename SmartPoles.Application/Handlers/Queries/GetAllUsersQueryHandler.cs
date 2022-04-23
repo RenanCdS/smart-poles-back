@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace SmartPoles.Application.Handlers.Queries
 {
-    public class GetAllUsersQueryHandler : IRequestHandler<GetAllUsersQuery, Response<IEnumerable<UserResponse>>>
+    public class GetAllUsersQueryHandler : IRequestHandler<GetAllUsersQuery, Response<IEnumerable<UserWithCondominiumResponse>>>
     {
         private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
@@ -22,12 +22,12 @@ namespace SmartPoles.Application.Handlers.Queries
             _userRepository = userRepository;
             _mapper = mapper;
         }
-        public async Task<Response<IEnumerable<UserResponse>>> Handle(GetAllUsersQuery request, CancellationToken cancellationToken)
+        public async Task<Response<IEnumerable<UserWithCondominiumResponse>>> Handle(GetAllUsersQuery request, CancellationToken cancellationToken)
         {
-            var usersFromDatabase = await _userRepository.GetAllAsync();
-            var usersToReturn = _mapper.Map<IEnumerable<UserResponse>>(usersFromDatabase);
+            var usersFromDatabase = await _userRepository.GetAllUsersWithCondominiumAsync();
+            var usersToReturn = _mapper.Map<IEnumerable<UserWithCondominiumResponse>>(usersFromDatabase);
 
-            return Response<IEnumerable<UserResponse>>.Ok(usersToReturn);
+            return Response<IEnumerable<UserWithCondominiumResponse>>.Ok(usersToReturn);
         }
     }
 }
