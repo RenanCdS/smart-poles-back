@@ -90,5 +90,18 @@ namespace SmartPoles.API.Controllers
 
             return Ok(response.Value);
         }
+
+        [HttpGet("{condominiumId:Guid}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [Produces("application/json")]
+        public async Task<IActionResult> GetCondominiumsById(Guid condominiumId)
+        {
+            var request = new GetCondominiumByIdQuery(condominiumId);
+            var response = await _mediator.Send(request);
+
+            return Ok(response.Value);
+        }
     }
 }

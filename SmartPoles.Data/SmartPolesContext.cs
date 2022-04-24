@@ -43,7 +43,7 @@ namespace SmartPoles.Data
                 Name = "Betina",
                 Username = "Betina123",
                 Salt = "v2eYortZiRuSUGhGPZV90w==",
-                CondominiumId = Guid.Parse("c88cdc3a-6b82-460b-9356-dc63847aa437"),
+                CondominiumId = Guid.Parse("922b5292-a5bc-4e89-8f33-286c88582a59"),
                 Password = "0eWGHK2LE00RPzS5PJVULOVRDJSo72U4in8q0+WSVLg=",
                 Id = Guid.Parse("735332f6-0918-4c6c-bd12-23cc7cd58991"),
                 Role = CrossCutting.Enums.Role.ADM
