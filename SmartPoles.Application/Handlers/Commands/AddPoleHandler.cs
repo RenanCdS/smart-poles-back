@@ -6,6 +6,7 @@ using SmartPoles.CrossCutting.Error;
 using SmartPoles.Domain.Entities;
 using SmartPoles.Domain.Interfaces.Repositories;
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -30,6 +31,14 @@ namespace SmartPoles.Application.Handlers.Commands
             if (condominium is null)
             {
                 return Response<bool>.Fail(ErrorMessages.CONDOMINIUM_NOT_FOUND);
+            }
+
+            var poles = await _poleRepository.GetPolesByCondominiumIdAsync(condominium.Id);
+
+            var gatewayPole = (poles as List<Pole>).Find(pole => pole.IsGateway);
+            if (gatewayPole is not null && request.IsGateway)
+            {
+                return Response<bool>.Fail(ErrorMessages.CONDOMINIUM_ALREADY_HAS_GATEWAY_POLE);
             }
 
             var entityToBeCreated = _mapper.Map<Pole>(request);

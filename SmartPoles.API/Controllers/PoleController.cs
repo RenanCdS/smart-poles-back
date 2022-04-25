@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SmartPoles.Application.Requests.Commands;
 using SmartPoles.Application.Requests.Queries;
+using SmartPoles.CrossCutting.Commons;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -32,7 +33,7 @@ namespace SmartPoles.API.Controllers
 
             if (!response.IsSuccess)
             {
-                return BadRequest(response.ErrorMessages.FirstOrDefault());
+                return BadRequest(new Error(response.ErrorMessages.FirstOrDefault()));
             }
             return StatusCode(StatusCodes.Status201Created);
         }
