@@ -76,6 +76,23 @@ namespace SmartPoles.API.Controllers
             return Ok(response.Value);
         }
 
+        [HttpPut("user")]
+        [Authorize(Policy = Policies.ADM_PERMISSION)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [Produces("application/json")]
+        public async Task<IActionResult> UpdateUser(UpdateUserRequest updateUserRequest)
+        {
+            var response = await _mediator.Send(updateUserRequest);
+
+            if (!response.IsSuccess)
+            {
+                return BadRequest(response.ErrorMessages.FirstOrDefault());
+            }
+            return Ok();
+        }
+
 
         [HttpGet("user/{username}")]
         [Authorize]
