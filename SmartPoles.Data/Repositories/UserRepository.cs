@@ -2,6 +2,7 @@
 using SmartPoles.Domain.Entities;
 using SmartPoles.Domain.Interfaces.Repositories;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace SmartPoles.Data.Repositories
@@ -22,6 +23,13 @@ namespace SmartPoles.Data.Repositories
         public async Task<IEnumerable<User>> GetAllUsersWithCondominiumAsync()
         {
             return await _context.Users.Include(u => u.Condominium).ToListAsync();
+        }
+
+        public async Task<IEnumerable<User>> GetAllUsersButCurrentUserWithCondominiumAsync(string currentUsername)
+        {
+            return await _context.Users.Include(u => u.Condominium)
+                .Where(u => u.Username != currentUsername)
+                .ToListAsync();
         }
     }
 }

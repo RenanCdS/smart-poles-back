@@ -52,21 +52,21 @@ namespace SmartPoles.Data
             modelBuilder.Entity<Condominium>().HasData(new Condominium()
             {
                 Id = Guid.Parse("c88cdc3a-6b82-460b-9356-dc63847aa437"),
-                Name = "Condominio 1",
+                Name = "Condominio Thera",
                 City = "São Bernardo do Campo",
                 Image = "teste"
             },
             new Condominium()
             {
                 Id = Guid.Parse("922b5292-a5bc-4e89-8f33-286c88582a59"),
-                Name = "Condominio 2",
-                City = "Diadema",
+                Name = "Alphaville place",
+                City = "São Paulo",
                 Image = "teste"
             },
             new Condominium()
             {
                 Id = Guid.Parse("52191423-1a89-4340-8915-b233a50d7df7"),
-                Name = "Condominio 3",
+                Name = "Alvorada palace",
                 City = "Santo André",
                 Image = "teste"
             });

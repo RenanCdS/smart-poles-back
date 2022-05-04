@@ -8,5 +8,6 @@ namespace SmartPoles.Domain.Interfaces.Repositories
     {
         Task<User> GetUserByUsernameAsync(string username);
         Task<IEnumerable<User>> GetAllUsersWithCondominiumAsync();
+        Task<IEnumerable<User>> GetAllUsersButCurrentUserWithCondominiumAsync(string currentUsername);
     }
 }

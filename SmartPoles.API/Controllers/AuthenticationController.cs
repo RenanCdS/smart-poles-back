@@ -8,6 +8,7 @@ using SmartPoles.Application.Requests.Queries;
 using SmartPoles.CrossCutting.Constants;
 using SmartPoles.Domain.DTOs;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace SmartPoles.API.Controllers
@@ -66,7 +67,8 @@ namespace SmartPoles.API.Controllers
         [Produces("application/json")]
         public async Task<IActionResult> GetAllUsers()
         {
-            var getAllUsersQuery = new GetAllUsersQuery();
+            var currentUsername = HttpContext.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name);
+            var getAllUsersQuery = new GetAllUsersQuery(currentUsername.Value);
             var response = await _mediator.Send(getAllUsersQuery);
 
             if (!response.IsSuccess)

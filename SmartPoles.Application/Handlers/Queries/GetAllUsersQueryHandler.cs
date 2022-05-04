@@ -24,7 +24,7 @@ namespace SmartPoles.Application.Handlers.Queries
         }
         public async Task<Response<IEnumerable<UserWithCondominiumResponse>>> Handle(GetAllUsersQuery request, CancellationToken cancellationToken)
         {
-            var usersFromDatabase = await _userRepository.GetAllUsersWithCondominiumAsync();
+            var usersFromDatabase = await _userRepository.GetAllUsersButCurrentUserWithCondominiumAsync(request.Username);
             var usersToReturn = _mapper.Map<IEnumerable<UserWithCondominiumResponse>>(usersFromDatabase);
 
             return Response<IEnumerable<UserWithCondominiumResponse>>.Ok(usersToReturn);
